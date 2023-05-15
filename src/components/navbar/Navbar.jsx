@@ -4,6 +4,7 @@ import "./navbar.scss";
 
 const Navbar = () => {
   const [active, setActive] = useState(false);
+  const [open, setOpen] = useState(false);
 
   const isActive = () => {
     window.scrollY > 0 ? setActive(true) : setActive(false);
@@ -37,7 +38,30 @@ const Navbar = () => {
           <span>English</span>
           <span>Sign In</span>
           {!currentUser?.isSeller && <span>Become a seller</span>}
-          <button>Join</button>
+          {!currentUser && <button>Join</button>}
+          {currentUser && (
+            <div className="user" onClick={() => setOpen(!open)}>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Windows_10_Default_Profile_Picture.svg/768px-Windows_10_Default_Profile_Picture.svg.png"
+                alt=""
+              />
+              <span>{currentUser?.username}</span>
+              {open && (
+                <div className="options">
+                  {currentUser?.isSeller && (
+                    <>
+                      <span>Gigs</span>
+                      <span>Add new Gig</span>
+                    </>
+                  )}
+
+                  <span>Orders</span>
+                  <span>Messages</span>
+                  <span>Logout</span>
+                </div>
+              )}
+            </div>
+          )}
         </div>
       </div>
       {active && (
