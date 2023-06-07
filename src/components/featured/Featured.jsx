@@ -11,16 +11,15 @@ export default function Featured() {
             <div className="searchinput">
               <img src="./img/search.png" alt="" />
               <input type="text " placeholder="try building mobile app" />
-              <button>Search</button>
-
-              <div className="popular">
-                <span>Popular:</span>
-                <button>Web Design</button>
-                <button>Wordpress</button>
-                <button>Logo Design</button>
-                <button>AI Services</button>
-              </div>
             </div>
+            <button>Search</button>
+          </div>
+          <div className="popular">
+            <span>Popular:</span>
+            <button>Web Design</button>
+            <button>Wordpress</button>
+            <button>Logo Design</button>
+            <button>AI Services</button>
           </div>
         </div>
         <div className="right">
