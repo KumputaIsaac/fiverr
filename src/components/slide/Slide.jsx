@@ -1,4 +1,4 @@
-import React, { Children } from "react";
+import React from "react";
 import "./slide.scss";
 import Slider from "infinite-react-carousel";
 
