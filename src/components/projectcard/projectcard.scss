@@ -1,30 +1,40 @@
-.catcard {
-  width: 232px;
-  height: 344px;
-  color: white;
+.projectCard {
+  width: 300px;
+  height: 300px;
   border-radius: 5px;
+  overflow: hidden;
   cursor: pointer;
-  position: relative;
+  border: 1px solid rgb(225, 225, 225);
 
   img {
     width: 100%;
-    height: 100%;
+    height: 70%;
     object-fit: cover;
-    margin-right: 30px;
   }
 
-  .desc {
-    font-weight: 300;
-    position: absolute;
-    top: 15px;
-    left: 15px;
-  }
+  .info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
 
-  .title {
-    font-weight: 500;
-    font-size: 24px;
-    position: absolute;
-    left: 15px;
-    top: 40px;
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .texts {
+      h2 {
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      span {
+        font-size: 14px;
+        font-weight: 300;
+      }
+    }
   }
 }

@@ -1,23 +1,25 @@
 import React from "react";
-import "./featured.scss";
+import "./Featured.scss";
 
-export default function Featured() {
+function Featured() {
   return (
     <div className="featured">
       <div className="container">
         <div className="left">
-          <h1>Find the perfect feelance services for your business</h1>
+          <h1>
+            Find the perfect <span>freelance</span> services for your business
+          </h1>
           <div className="search">
-            <div className="searchinput">
+            <div className="searchInput">
               <img src="./img/search.png" alt="" />
-              <input type="text " placeholder="try building mobile app" />
+              <input type="text" placeholder='Try "building mobil app"' />
             </div>
             <button>Search</button>
           </div>
           <div className="popular">
             <span>Popular:</span>
             <button>Web Design</button>
-            <button>Wordpress</button>
+            <button>WordPress</button>
             <button>Logo Design</button>
             <button>AI Services</button>
           </div>
@@ -29,3 +31,5 @@ export default function Featured() {
     </div>
   );
 }
+
+export default Featured;

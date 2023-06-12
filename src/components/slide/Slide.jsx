@@ -1,10 +1,10 @@
 import React from "react";
-import "./slide.scss";
+import "./Slide.scss";
 import Slider from "infinite-react-carousel";
 
-export default function Slide({ children, slidesToShow, arrowsScroll }) {
+const Slide = ({ children, slidesToShow, arrowsScroll }) => {
   return (
-    <div className="Slide">
+    <div className="slide">
       <div className="container">
         <Slider slidesToShow={slidesToShow} arrowsScroll={arrowsScroll}>
           {children}
@@ -12,4 +12,6 @@ export default function Slide({ children, slidesToShow, arrowsScroll }) {
       </div>
     </div>
   );
-}
+};
+
+export default Slide;
